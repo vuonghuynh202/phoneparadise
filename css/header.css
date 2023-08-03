@@ -1,0 +1,258 @@
+/* Header */
+	.header {
+		position: fixed;
+		left: 0;right: 0;
+		top: 10px;
+		z-index: 12;
+		background-color: white;
+		box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+		height: 110px;
+		padding: 0 30px;
+		display: flex;
+		align-items: center !important;
+	}
+
+	/* Logo */
+		.header .logo {
+			width: 140px;
+			/* float: left; */
+			transition: all .4s ease;
+		}
+		.header .logo:hover {
+			transform: scale(1.1)
+		}
+		.header .logo img {
+			width: 100%;
+			height: 100%;
+			vertical-align: middle;
+		}
+	/* ======= End logo ======== */
+
+	/* Content */
+		.header .content{
+			/* tru width cua logo */
+			/* width: calc(100% - 250px);
+			float: left; */
+			display: flex;
+			align-items: flex-start;
+			justify-content: space-between;
+			flex: 1;
+		}
+
+		/* Search */
+			.search-header {
+				/* float: left; */
+				display: flex;
+				flex-direction: column;
+				position: relative;
+				left: unset !important;
+				top: unset !important;
+				flex: 1;
+				margin-left: 50px;
+				padding-right: 70px;
+			}
+
+			form.input-search {
+				position: relative;
+				margin-left: 20px;
+				background: #ddd;
+				border: 1px solid #b000dc;
+				border-radius: 10px;
+				height: 39px;
+				width: 100%;
+				border-radius: 5px 0 0 5px;
+				/* điều chỉnh width của ô tìm kiếm trên header ở đây */
+			}
+			.input-search input {
+				/* float: left; */
+				padding-left: 15px;
+				border: none;
+				border-radius: 5px 0 0 5px;
+				height: 100%;
+				width: 100%;
+			}
+			.input-search button {
+				position: absolute;
+				left: 100%;
+				bottom: -1px;
+				font-size: 18px;
+				font-weight: bold;
+				padding: 10px;
+				color: #fff;
+				background-image: linear-gradient(to right, #e449f5 0%, #f5576c 100%);
+				width: 50px;
+				border: none;
+				cursor: pointer;
+				border-radius: 0 5px 5px 0;
+				-webkit-transition-duration: .3s;
+				     -o-transition-duration: .3s;
+				        transition-duration: .3s;
+			}
+			.input-search button:hover {
+				color: #000;
+			}
+
+			.tags {
+				margin: 5px 0 0 20px;
+				font-size: 13px;
+				width: 100%;
+				position: absolute;
+				top: 100%;
+			}
+			.tags a {
+				color: gray;
+				padding: 0 5px;
+			}
+			.tags a:hover {
+				color: #b000dc;
+				text-decoration: underline;
+			}
+
+			/* W3 school autocomplete */
+				.autocomplete {
+					/*the container must be positioned relative:*/
+					position: relative;
+					height: 100%;
+				}
+				.autocomplete-items {
+					position: absolute;
+					border: 1px solid #d4d4d4;
+					border-bottom: none;
+					border-top: none;
+					z-index: 99;
+					/*position the autocomplete items to be the same width as the container:*/
+					top: 100%;
+					left: 0;
+					right: 0;
+				}
+				.autocomplete-items div {
+					padding: 10px;
+					cursor: pointer;
+					background-color: #fff; 
+					border-bottom: 1px solid #d4d4d4; 
+				}
+				.autocomplete-items div:hover {
+					/*when hovering an item:*/
+					background-color: #e9e9e9; 
+				}
+				.autocomplete-active {
+					/*when navigating through the items using the arrow keys:*/
+					background-color: DodgerBlue !important; 
+					color: #ffffff; 
+				}
+			/* End auto complete */
+		/* ======= End search ========== */
+
+		/* Tools Member */
+			.tools-member {
+				/* float: right; */
+				/* display: table; */
+				margin-left: 50px;
+				margin-top: 5px;
+				font-size: 13px;
+				text-align: center;
+			}
+
+			.tools-member a {
+				position: relative;
+				padding: 5px 0;
+				text-align: center;
+				font-size: 16px;
+				font-weight: bold;
+				color: #565;
+				cursor: pointer;
+				margin-right: 20px;
+			}
+			.tools-member a:hover > i {
+				border: 1px solid #fff;
+				background-image: linear-gradient(to right, #e449f5 0%, #f5576c 100%);
+				color: #fff;
+			}
+
+			.tools-member i { /* icon */
+				padding: 10px;
+				border-radius: 50%;
+				border: 1px solid #ccc;
+				background-color: #fff;
+				color: #000;
+				-webkit-transition: 0.2s;
+				-o-transition: 0.2s;
+				transition: 0.2s;
+			}
+			.tools-member .fa-user {
+				padding: 7px 9px;
+			}
+			.tools-member .fa-shopping-cart {
+				padding: 8px 8px;
+			}
+			/* Member */
+				.member {
+					position: relative;
+					/* float: left; */
+					display: table-cell;
+				}
+				.member:hover > .menuMember{
+					z-index: 20;
+					transform: translateX(-40%) scale(1);
+				}
+				.member .menuMember {
+					position: absolute;
+					left: 0;
+					text-align: center;
+					border-radius: 5px;
+					background-color: #eee;
+					min-width: 170px;
+					transition-duration: .15s;
+					transform: translateX(-40%) scale(0);
+				}
+				.member .menuMember a {
+					display: block;
+					padding: 10px 0;
+				}
+				.member .menuMember a:hover {
+					background-color: #888;
+					color: #eee;
+				}
+				.member .hide {
+					display: none;
+				}
+			/* ======= End Member ======= */
+
+			/* Cart */
+				.cart {
+					/* float: left; */
+					display: table-cell;
+					/* border-left: 1px solid #bbb; */
+					margin: 0 15px; 
+					padding-left: 5px;
+				}
+				.cart-number {
+					position: absolute;
+					left: 1.4em;
+					bottom: -1em;
+					font-weight: bold;
+					font-size: 1em;
+					color: red;
+					border-radius: 50%;
+					width: 2em;
+					height: 2em;
+					line-height: 2em;
+					text-align: center;
+				}
+				.cart .cart-number {
+					transition-duration: .4s; 
+				}
+			/* ======= End Cart ======== */
+
+			/* Check Order - Đã loại bỏ */
+				.check-order {
+					float: left;
+					display: table-cell;
+					border-left: 1px solid #bbb;
+					margin-left: 5px;
+					padding-left: 5px; 
+				}
+			/* ======= End Check Order ======= */
+		/* ======= End Tools Member ======= */
+	/* ======= End Content ========= */
+/* ======= End header ======== */

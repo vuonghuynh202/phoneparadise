@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Tin tức smartphone</title>
+    <link rel="shortcut icon" href="img/favicon.ico" />
+
+    <!-- Load font awesome icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+        crossorigin="anonymous">
+
+    <!-- our files -->
+    <!-- css -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/topnav.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/taikhoan.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/tintuc.css">
+
+    <!-- js -->
+    <script src="data/products.js"></script>
+	<script src="js/dungchung.js"></script>
+    <script>
+        window.onload = function () {
+            khoiTao();
+            // thêm tags (từ khóa) vào khung tìm kiếm
+            var tags = ["Samsung", "iPhone", "Huawei", "Oppo", "Mobi"];
+            for (var t of tags) addTags(t, "index.html?search=" + t);
+        }
+    </script>
+
+</head>
+
+<body>
+    <script> addTopNav();</script>
+
+    <section style="min-height: 85vh">
+        <script> addHeader(); </script>
+
+        <div class="body-tintuc">
+            <div class="tintuc-info">
+                <a href="https://thanhnien.vn/thi-truong-smartphone-trung-quoc-am-dam-ngoai-tru-iphone-185230727230944517.htm" target="_blank">
+                    <img src="https://images2.thanhnien.vn/thumb_w/640/528068263637045248/2023/7/27/iphone-apple-16904742512092063970984.jpeg">
+                    <h2>Thị trường smartphone Trung Quốc ảm đạm ngoại trừ iPhone</h2>
+                </a>
+                <br/>
+                <h5>Thanh Niên &emsp;3 giờ</h5>
+            </div>
+            <div class="tintuc-info">
+                <a href="https://khoahocdoisong.vn/ly-do-nen-tat-smartphone-vai-phut-moi-ngay-post214180.html" target="_blank">
+                    <img src="https://photo-cms-kienthuc.epicdn.me/w730/Uploaded/2023/aslxeflysfj/2023_07_31/dien-thoai-samsung-bi-do-khong-tat-nguon-duoc-1514.jpg">
+                    <h2>Lý do nên tắt smartphone vài phút mỗi ngày</h2>
+                </a>
+                <br/>
+                <h5>Khoa học và đời sống &emsp; 6 giờ</h5>
+            </div>
+            <div class="tintuc-info">
+                <a href="https://vtv.vn/kinh-te/nguoi-trung-quoc-dang-chi-nhieu-tien-hon-cho-smartphone-20230801110546039.htm" target="_blank">
+                    <img src="https://vtv1.mediacdn.vn/2023/1/31/smartphone-1-1675157150713831963136.jpg">
+                    <h2>Người Trung Quốc đang chi nhiều tiền hơn cho smartphone</h2>
+                </a>
+                <br/>
+                <h5>VTV &emsp; 6 giờ</h5>
+            </div>
+            <div class="tintuc-info">
+                <a href="https://www.businessinsider.in/tech/mobile/news/indias-smartphone-shipments-continue-to-slip-but-premium-segment-going-strong-with-samsung-in-the-lead/articleshow/102300347.cms" target="_blank">
+                    <img src="https://staticbiassets.in/thumb/msid-102300290,width-700,resizemode-4,imgsize-51984/samsung-galaxy-m34-5g.jpg">
+                    <h2>India’s smartphone shipments continue to slip but premium segment going strong with Samsung in the lead</h2>
+                </a>
+                <br/>
+                <h5>Business Insider &emsp; 13 giờ</h5>
+            </div>
+            <div class="tintuc-info" style="border-bottom: 0;">
+                <a href="https://wccftech.com/xiaomi-14-pro-first-android-phone-with-titanium-build/" target="_blank">
+                    <img src="https://cdn.wccftech.com/wp-content/uploads/2023/08/Xiaomi-14-Pro-728x410.jpg">
+                    <h2>Xiaomi 14 Pro To Be The World’s First Android Smartphone To Switch To A Titanium Build</h2>
+                </a>
+                <br/>
+                <h5>Wccf Tech &emsp; 9 giờ</h5>
+            </div> 
+
+        </div>
+
+    </section>
+
+    <script> addContainTaiKhoan(); </script>
+
+    <div class="footer">
+        <script>addFooter();</script>
+        
+    </div>
+
+    <i class="fa fa-arrow-up" id="goto-top-page" onclick="gotoTop()"></i>
+
+</body>
+
+</html>
